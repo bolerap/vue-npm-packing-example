@@ -1,23 +1,38 @@
 {
-  "name": "vue-npm",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vue-npm-ft",
+  "version": "0.1.7",
+  "private": false,
+  "description": "abc",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:lib": "vue-cli-service build --target lib --name vue-npm-ft --inline-vue",
+    "publish:lib": "yarn build:lib && npm publish",
+    "build:wc": "vue-cli-service build --target wc --name vue-npm-ft --inline-vue"
   },
+  "main": "dist/vue-npm-ft.common.js",
   "dependencies": {
+    "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@babel/polyfill": "^7.11.5",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
+    "bootstrap": "^4.5.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "mutationobserver-shim": "^0.3.7",
+    "popper.js": "^1.16.1",
+    "portal-vue": "^2.1.7",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "vue-cli-plugin-bootstrap-vue": "~0.7.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
